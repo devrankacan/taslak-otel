@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Grand Vista Hotels & Resorts",
+  title: "Grand Vista Hotel",
   description:
-    "Grand Vista Hotels & Resorts - Kurumsal otel zinciri için lüks misafirperverlik çözümleri.",
+    "Grand Vista Hotel - Şehrin kalbinde lüks ve konforlu konaklama deneyimi.",
 };
 
 export default function RootLayout({

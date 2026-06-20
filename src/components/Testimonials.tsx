@@ -1,36 +1,28 @@
 const testimonials = [
   {
     quote:
-      "Grand Vista ile çalışmaya başladığımızdan sonra misafir memnuniyet skorlarımız %23 arttı. Operasyon süreçlerimiz artık çok daha şeffaf.",
+      "Odamız çok temiz ve konforluydu, personel son derece ilgiliydi. Kahvaltı seçenekleri de oldukça zengindi. Tekrar geleceğiz.",
     name: "Elif Karaca",
-    title: "Genel Müdür, Marmara Resort Group",
+    title: "İstanbul",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
   },
   {
     quote:
-      "Çok şubeli yapımızda standardizasyon en büyük zorluğumuzdu. Grand Vista'nın sunduğu çözümler bu süreci kökten değiştirdi.",
+      "İş seyahatimde kaldığım en rahat otellerden biriydi. Konumu merkezi, oda çok sessizdi, gayet dinlendirici bir konaklama oldu.",
     name: "Mehmet Aydoğan",
-    title: "Operasyon Direktörü, Anadolu Hotels",
+    title: "Ankara",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80",
   },
   {
     quote:
-      "Profesyonellik ve hız konusunda beklentilerimizin üzerinde bir hizmet aldık. Kesinlikle tavsiye ediyoruz.",
+      "Spa hizmeti ve havuz beklentimizin çok üzerindeydi. Ailecek harika bir tatil geçirdik, kesinlikle tavsiye ederim.",
     name: "Selin Yıldırım",
-    title: "Marka Müdürü, Ege Coast Hotels",
+    title: "İzmir",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
   },
-];
-
-const partners = [
-  "Marmara Resort Group",
-  "Anadolu Hotels",
-  "Ege Coast Hotels",
-  "İstanbul Plaza Hospitality",
-  "Akdeniz Otelcilik",
 ];
 
 export default function Testimonials() {
@@ -39,10 +31,10 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
-            Referanslarımız
+            Misafir Yorumları
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Bize Güvenen Otel Markaları
+            Misafirlerimiz Ne Diyor?
           </h2>
         </div>
 
@@ -65,17 +57,6 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 border-t border-white/10 pt-12">
-          {partners.map((p) => (
-            <span
-              key={p}
-              className="text-sm font-medium uppercase tracking-wide text-zinc-500"
-            >
-              {p}
-            </span>
           ))}
         </div>
       </div>

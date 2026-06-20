@@ -11,15 +11,14 @@ export default function Contact() {
               Bizimle İletişime Geçin
             </h2>
             <p className="mt-6 text-zinc-600">
-              Kurumsal otel zincirinize özel çözümlerimiz hakkında bilgi
-              almak için formu doldurun, ekibimiz 24 saat içinde sizinle
-              iletişime geçsin.
+              Rezervasyon, özel istekleriniz veya sorularınız için formu
+              doldurun, ekibimiz en kısa sürede size dönüş yapsın.
             </p>
 
             <div className="mt-10 space-y-4 text-sm text-zinc-600">
               <p>📍 Levent Mah. Büyükdere Cd. No:120, İstanbul</p>
               <p>📞 +90 (212) 555 01 23</p>
-              <p>✉️ kurumsal@grandvista.com</p>
+              <p>✉️ info@grandvista.com</p>
             </div>
           </div>
 
@@ -32,7 +31,7 @@ export default function Contact() {
               />
               <input
                 type="text"
-                placeholder="Şirket / Otel Adı"
+                placeholder="Konu"
                 className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-sm outline-none focus:border-amber-500"
               />
             </div>

@@ -1,15 +1,15 @@
 const features = [
   {
-    title: "Marka Konumlandırma",
-    desc: "Otel zincirinizin kimliğini güçlendiren, misafir sadakatini artıran kurumsal kimlik stratejileri.",
+    title: "Merkezi Konum",
+    desc: "Şehrin kalbinde, başlıca turistik ve iş noktalarına yürüme mesafesinde.",
   },
   {
-    title: "Operasyonel Mükemmellik",
-    desc: "Çok şubeli otel yönetimi için standartlaştırılmış süreçler ve kalite kontrol sistemleri.",
+    title: "Özenli Hizmet",
+    desc: "Check-in'den check-out'a, deneyimli ekibimizle sıcak ve kişisel bir ağırlama.",
   },
   {
-    title: "Dijital Misafir Deneyimi",
-    desc: "Rezervasyondan check-out'a kadar kusursuz, ölçülebilir ve kişiselleştirilmiş misafir yolculuğu.",
+    title: "Konfor Odaklı Tasarım",
+    desc: "Her odamız, dinlenmenizi önceleyen modern bir konfor anlayışıyla tasarlandı.",
   },
 ];
 
@@ -23,13 +23,13 @@ export default function About() {
               Hakkımızda
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Kurumsal Otel Markaları İçin Güvenilir Çözüm Ortağı
+              Şehrin Kalbinde Konforlu Bir Konaklama
             </h2>
             <p className="mt-6 text-zinc-600">
-              15 yılı aşan tecrübemizle, dünyanın dört bir yanındaki otel
-              zincirlerine danışmanlık, teknoloji ve operasyon desteği
-              sağlıyoruz. Amacımız, markanızın değerini koruyarak misafir
-              deneyimini bir adım öteye taşımak.
+              Grand Vista Hotel, hem iş hem tatil amaçlı seyahatlerinizde
+              size huzurlu bir konaklama sunmak için tasarlandı. Şık
+              odalarımız, zengin kahvaltımız ve misafirperver ekibimizle
+              sizi ağırlamayı sabırsızlıkla bekliyoruz.
             </p>
 
             <div className="mt-10 space-y-8">

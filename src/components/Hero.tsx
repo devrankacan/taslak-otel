@@ -14,15 +14,14 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 pt-24 text-center">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-amber-400">
-          Kurumsal Misafirperverlik Çözümleri
+          Grand Vista Hotel
         </p>
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-6xl">
-          Otel Zincirleri İçin <br /> Lüks ve Güvenilir Deneyim
+          Şehrin Kalbinde <br /> Lüks ve Konforlu Bir Konaklama
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-300">
-          Grand Vista, kurumsal otel markalarına özel olarak tasarlanmış
-          misafir deneyimi, operasyon yönetimi ve marka konumlandırma
-          çözümleri sunar.
+          Şık odalarımız, zengin kahvaltımız ve misafirperver ekibimizle
+          unutulmaz bir konaklama deneyimi yaşatıyoruz.
         </p>
         <AvailabilitySearch />
 

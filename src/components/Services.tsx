@@ -1,33 +1,33 @@
 const services = [
   {
-    title: "Rezervasyon Yönetim Sistemi",
-    desc: "Tüm şubeleriniz için merkezi, gerçek zamanlı rezervasyon altyapısı.",
-    icon: "🗓️",
-  },
-  {
-    title: "Misafir İlişkileri & CRM",
-    desc: "Sadakat programları ve kişiselleştirilmiş misafir iletişimi.",
-    icon: "🤝",
-  },
-  {
-    title: "Etkinlik & Toplantı Çözümleri",
-    desc: "Kurumsal etkinlikler ve toplantılar için kusursuz organizasyon desteği.",
-    icon: "🏛️",
-  },
-  {
-    title: "Spa & Wellness",
-    desc: "Premium sağlık ve wellness hizmetleriyle bütünleşik misafir deneyimi.",
+    title: "Spa & Wellness Merkezi",
+    desc: "Sauna, buhar odası ve masaj salonlarıyla yenilenmiş hissedin.",
     icon: "💆",
   },
   {
-    title: "F&B Operasyon Danışmanlığı",
-    desc: "Restoran ve bar operasyonlarında verimlilik ve kalite artışı.",
+    title: "Restoran & Bar",
+    desc: "Açık büfe kahvaltı, à la carte restoran ve gece yarısına kadar açık bar.",
     icon: "🍽️",
   },
   {
-    title: "7/24 Teknik Destek",
-    desc: "Otel yönetim sistemleriniz için kesintisiz teknik destek hattı.",
-    icon: "🛎️",
+    title: "Açık & Kapalı Havuz",
+    desc: "Isıtmalı kapalı havuz ve manzaralı açık havuzumuzda serinleyin.",
+    icon: "🏊",
+  },
+  {
+    title: "Fitness Merkezi",
+    desc: "Son teknoloji ekipmanlarla 7/24 açık fitness salonu.",
+    icon: "🏋️",
+  },
+  {
+    title: "Toplantı & Etkinlik Salonları",
+    desc: "Düğün, toplantı ve özel davetleriniz için donanımlı salonlar.",
+    icon: "🏛️",
+  },
+  {
+    title: "Ücretsiz Otopark & Transfer",
+    desc: "Misafirlerimize özel vale park ve havalimanı transfer hizmeti.",
+    icon: "🚗",
   },
 ];
 
@@ -37,10 +37,10 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
-            Hizmetlerimiz
+            Otel İmkanları
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-            Otel Zincirinizi Büyütecek Çözümler
+            Konaklamanız Boyunca Yanınızdayız
           </h2>
         </div>
 
