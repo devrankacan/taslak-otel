@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-950">
@@ -23,12 +25,12 @@ export default function Hero() {
           çözümleri sunar.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#iletisim"
+          <Link
+            href="/rezervasyon"
             className="rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300"
           >
-            İletişime Geçin
-          </a>
+            Rezervasyon Yap
+          </Link>
           <a
             href="#odalar"
             className="rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:bg-white/10"

@@ -83,10 +83,10 @@ export default async function RoomDetailPage({
                 </div>
               </dl>
               <Link
-                href="/#iletisim"
+                href={`/rezervasyon?room=${room.slug}`}
                 className="mt-8 block w-full rounded-full bg-amber-400 px-6 py-3 text-center text-sm font-semibold text-zinc-950 transition hover:bg-amber-300"
               >
-                İletişime Geçin
+                Rezervasyon Yap
               </Link>
             </aside>
           </div>

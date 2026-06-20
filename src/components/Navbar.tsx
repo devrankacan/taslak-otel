@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const links = [
-  { href: "#hakkimizda", label: "Hakkımızda" },
-  { href: "#odalar", label: "Odalar & Süitler" },
-  { href: "#hizmetler", label: "Hizmetler" },
-  { href: "#referanslar", label: "Referanslar" },
-  { href: "#iletisim", label: "İletişim" },
+  { href: "/#hakkimizda", label: "Hakkımızda" },
+  { href: "/#odalar", label: "Odalar & Süitler" },
+  { href: "/#hizmetler", label: "Hizmetler" },
+  { href: "/#referanslar", label: "Referanslar" },
+  { href: "/#iletisim", label: "İletişim" },
 ];
 
 export default function Navbar() {
@@ -34,12 +35,12 @@ export default function Navbar() {
           ))}
         </div>
 
-        <a
-          href="#iletisim"
+        <Link
+          href="/rezervasyon"
           className="hidden rounded-full bg-amber-400 px-5 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300 lg:inline-block"
         >
-          İletişim
-        </a>
+          Rezervasyon Yap
+        </Link>
 
         <button
           aria-label="Menüyü Aç/Kapat"
@@ -85,13 +86,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#iletisim"
+            <Link
+              href="/rezervasyon"
               onClick={() => setOpen(false)}
               className="rounded-full bg-amber-400 px-5 py-2 text-center text-sm font-semibold text-zinc-950"
             >
-              İletişim
-            </a>
+              Rezervasyon Yap
+            </Link>
           </div>
         </div>
       )}
