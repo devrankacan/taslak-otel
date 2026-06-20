@@ -1,0 +1,27 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
+import About from "@/components/About";
+import Rooms from "@/components/Rooms";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <div className="flex flex-1 flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <Hero />
+        <Stats />
+        <About />
+        <Rooms />
+        <Services />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+}
