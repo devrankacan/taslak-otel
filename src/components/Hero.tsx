@@ -27,7 +27,7 @@ export default function Hero() {
             href="#iletisim"
             className="rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300"
           >
-            Demo Talep Edin
+            İletişime Geçin
           </a>
           <a
             href="#odalar"

@@ -38,7 +38,7 @@ export default function Navbar() {
           href="#iletisim"
           className="hidden rounded-full bg-amber-400 px-5 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300 lg:inline-block"
         >
-          Teklif Alın
+          İletişim
         </a>
 
         <button
@@ -90,7 +90,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="rounded-full bg-amber-400 px-5 py-2 text-center text-sm font-semibold text-zinc-950"
             >
-              Teklif Alın
+              İletişim
             </a>
           </div>
         </div>

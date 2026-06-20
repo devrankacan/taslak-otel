@@ -1,26 +1,5 @@
-const rooms = [
-  {
-    name: "Deluxe Oda",
-    desc: "Şehir manzaralı, modern donanımlı konfor odası.",
-    price: "₺3.200 / gece",
-    image:
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    name: "Executive Süit",
-    desc: "İş seyahatleri için geniş çalışma alanı ve salon.",
-    price: "₺5.800 / gece",
-    image:
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    name: "Presidential Süit",
-    desc: "Panoramik manzara, özel hizmet ve premium donanım.",
-    price: "₺12.500 / gece",
-    image:
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80",
-  },
-];
+import Link from "next/link";
+import { rooms } from "@/data/rooms";
 
 export default function Rooms() {
   return (
@@ -37,14 +16,15 @@ export default function Rooms() {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {rooms.map((room) => (
-            <div
-              key={room.name}
-              className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200 transition hover:shadow-lg"
+            <Link
+              key={room.slug}
+              href={`/odalar/${room.slug}`}
+              className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200 transition hover:shadow-lg"
             >
               <img
                 src={room.image}
                 alt={room.name}
-                className="h-56 w-full object-cover"
+                className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
               />
               <div className="p-6">
                 <div className="flex items-center justify-between">
@@ -56,8 +36,11 @@ export default function Rooms() {
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-zinc-600">{room.desc}</p>
+                <span className="mt-4 inline-block text-sm font-semibold text-amber-600 group-hover:underline">
+                  Detayları Gör →
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

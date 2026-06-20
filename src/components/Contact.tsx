@@ -8,7 +8,7 @@ export default function Contact() {
               İletişime Geçin
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
-              Otel Markanız İçin Teklif Alın
+              Bizimle İletişime Geçin
             </h2>
             <p className="mt-6 text-zinc-600">
               Kurumsal otel zincirinize özel çözümlerimiz hakkında bilgi
@@ -57,7 +57,7 @@ export default function Contact() {
               type="submit"
               className="w-full rounded-xl bg-amber-400 px-6 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300"
             >
-              Teklif Talebi Gönder
+              Mesajı Gönder
             </button>
           </form>
         </div>
