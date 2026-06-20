@@ -21,14 +21,24 @@ function parsePrice(price: string) {
   return Number(numeric) || 0;
 }
 
+function parseCapacity(capacity: string) {
+  const matches = capacity.match(/\d+/g);
+  return matches ? matches.reduce((sum, n) => sum + Number(n), 0) : 0;
+}
+
 export default function BookingWizard() {
   const searchParams = useSearchParams();
   const preselectedSlug = searchParams.get("room");
+  const initialCheckIn = searchParams.get("checkin") || "";
+  const initialCheckOut = searchParams.get("checkout") || "";
+  const initialGuests = Number(searchParams.get("guests")) || 2;
 
-  const [step, setStep] = useState(0);
-  const [checkIn, setCheckIn] = useState("");
-  const [checkOut, setCheckOut] = useState("");
-  const [guests, setGuests] = useState(2);
+  const [step, setStep] = useState(
+    initialCheckIn && initialCheckOut ? 1 : 0
+  );
+  const [checkIn, setCheckIn] = useState(initialCheckIn);
+  const [checkOut, setCheckOut] = useState(initialCheckOut);
+  const [guests, setGuests] = useState(initialGuests);
   const [roomSlug, setRoomSlug] = useState(preselectedSlug || "");
   const [guestInfo, setGuestInfo] = useState({
     name: "",
@@ -128,26 +138,39 @@ export default function BookingWizard() {
 
       {step === 1 && (
         <div className="space-y-5">
-          <h2 className="text-lg font-semibold text-zinc-900">Oda Seçimi</h2>
+          <div>
+            <h2 className="text-lg font-semibold text-zinc-900">Uygun Odalar</h2>
+            {checkIn && checkOut && (
+              <p className="mt-1 text-sm text-zinc-500">
+                {checkIn} – {checkOut} · {guests} misafir için müsait odalar
+              </p>
+            )}
+          </div>
           <div className="grid gap-4 sm:grid-cols-3">
-            {rooms.map((room) => (
-              <button
-                key={room.slug}
-                type="button"
-                onClick={() => setRoomSlug(room.slug)}
-                className={`overflow-hidden rounded-2xl border text-left transition ${
-                  roomSlug === room.slug
-                    ? "border-amber-500 ring-2 ring-amber-400"
-                    : "border-zinc-200 hover:border-amber-300"
-                }`}
-              >
-                <img src={room.image} alt={room.name} className="h-32 w-full object-cover" />
-                <div className="p-4">
-                  <p className="font-semibold text-zinc-900">{room.name}</p>
-                  <p className="mt-1 text-sm text-amber-600">{room.price}</p>
-                </div>
-              </button>
-            ))}
+            {rooms.map((room) => {
+              const fits = parseCapacity(room.capacity) >= guests;
+              return (
+                <button
+                  key={room.slug}
+                  type="button"
+                  onClick={() => setRoomSlug(room.slug)}
+                  className={`overflow-hidden rounded-2xl border text-left transition ${
+                    roomSlug === room.slug
+                      ? "border-amber-500 ring-2 ring-amber-400"
+                      : "border-zinc-200 hover:border-amber-300"
+                  } ${!fits ? "opacity-50" : ""}`}
+                >
+                  <img src={room.image} alt={room.name} className="h-32 w-full object-cover" />
+                  <div className="p-4">
+                    <p className="font-semibold text-zinc-900">{room.name}</p>
+                    <p className="mt-1 text-sm text-amber-600">{room.price}</p>
+                    <p className="mt-1 text-xs text-zinc-500">
+                      {fits ? "Müsait" : `Maks. ${parseCapacity(room.capacity)} misafir`}
+                    </p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       )}

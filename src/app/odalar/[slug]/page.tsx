@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RoomBookingSidebar from "@/components/RoomBookingSidebar";
 import { rooms } from "@/data/rooms";
 
 export function generateStaticParams() {
@@ -68,27 +69,7 @@ export default async function RoomDetailPage({
               </ul>
             </div>
 
-            <aside className="rounded-2xl bg-zinc-50 p-8 ring-1 ring-zinc-200">
-              <p className="text-2xl font-bold text-zinc-900">{room.price}</p>
-              <dl className="mt-6 space-y-3 text-sm text-zinc-600">
-                <div className="flex justify-between">
-                  <dt>Oda Büyüklüğü</dt>
-                  <dd className="font-medium text-zinc-900">{room.size}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt>Kapasite</dt>
-                  <dd className="font-medium text-zinc-900">
-                    {room.capacity}
-                  </dd>
-                </div>
-              </dl>
-              <Link
-                href={`/rezervasyon?room=${room.slug}`}
-                className="mt-8 block w-full rounded-full bg-amber-400 px-6 py-3 text-center text-sm font-semibold text-zinc-950 transition hover:bg-amber-300"
-              >
-                Rezervasyon Yap
-              </Link>
-            </aside>
+            <RoomBookingSidebar room={room} />
           </div>
         </div>
 

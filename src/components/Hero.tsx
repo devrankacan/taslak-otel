@@ -1,4 +1,4 @@
-import Link from "next/link";
+import AvailabilitySearch from "@/components/AvailabilitySearch";
 
 export default function Hero() {
   return (
@@ -24,16 +24,12 @@ export default function Hero() {
           misafir deneyimi, operasyon yönetimi ve marka konumlandırma
           çözümleri sunar.
         </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/rezervasyon"
-            className="rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-amber-300"
-          >
-            Rezervasyon Yap
-          </Link>
+        <AvailabilitySearch />
+
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
           <a
             href="#odalar"
-            className="rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            className="text-sm font-medium text-zinc-300 underline-offset-4 transition hover:text-amber-400 hover:underline"
           >
             Odaları Keşfedin
           </a>
